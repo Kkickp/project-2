@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Daily Journal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<style>
+  /* Dark Mode Styles */
+  body.dark-mode {
+    background-color: #121212;
+    color: white;
+  }
+
+  /* Light Mode Styles */
+  body.light-mode {
+    background-color: #f8f9fa;
+    color: black;
+  }
+</style>
+<body>
+    <!--nav bar-->
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+            <div class="container">
+              <a class="navbar-brand" href="#">My Daily Journal</a>
+              <button 
+              class="navbar-toggler" 
+              type="button" 
+              data-bs-toggle="collapse" 
+              data-bs-target="#navbarSupportedContent" 
+              aria-controls="navbarSupportedContent" 
+              aria-expanded="false" 
+              aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button> 
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-dark" > 
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#article">Article</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#gallery">Gallery</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#Schedule">Schedule</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#aboutme">About me</a>
+                  </li>
+                    <button
+                    type="button"
+                    class="btn btn-dark theme"
+                    id="dark"
+                    title="dark"
+                  >
+                    <i class="bi bi-moon-stars-fill"></i>
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-danger theme"
+                    id="light"
+                    title="light"
+                  >
+                    <i class="bi bi-brightness-high"></i>
+                  </button>
+                </div>
+              </div>
+            </nav>
+    </header>
+    <!-- end nav bar -->
+    <!--section-->
+    <!--Hero-->
+    <section id="hero" class=" text-sm-start text-center p-5" style="background-color: rgb(184, 221, 255);">
+        <div class="container">
+            <div class="d-sm-flex flex-sm-row-reverse align-items-center">
+                <img src="img/OIP.jpeg" alt="" class="img-fluid" width="300">
+                <div>
+                    <h1 class="fw-bold display-4">UDINUS Semarang, unggul dan inovatif di bidang teknologi dan bisnis.</h1>
+                    <h4 class="lead display-6">Terletak di jantung kota Semarang, 
+                        UDINUS menawarkan lingkungan belajar modern dan fasilitas lengkap bagi para mahasiswanya.
+                    </h4>
+                    <h6>
+                      <span id="tanggal"></span>
+                      <span id="jam"></span>
+                    </h6>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Article-->
+    <section id="article" class="text-center p-5 bg-danger-subtle" >
+        <h1 class="fw-bold display-4 pb-3">ARTICLE</h1>
+        <div class="row row-cols-1 row-cols-md-4 g-4 justify-content-center">
+            <div class="col">
+              <div class="card h-100">
+                <img src="img/OIP.jpeg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Profil dan Sejarah Udinus</h5>
+                  <p class="card-text">
+                    Artikel ini bisa membahas sejarah berdirinya Udinus, 
+                    mulai dari pendirian yayasan hingga berkembang menjadi universitas terkemuka di Semarang. 
+                    Informasi tentang visi, misi, dan nilai-nilai yang dipegang universitas ini juga dapat disertakan, 
+                    serta program-program unggulan yang telah dicapai oleh Udinus sejak awal berdirinya.</p>
+                </div>
+                <div class="card-footer">
+                  <small class="text-body-secondary">Last updated 3 mins ago</small>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <img src="img/OIP.jpeg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Fakultas dan Program Studi Terbaik di Udinus</h5>
+                  <p class="card-text">
+                    Di artikel ini, kita bisa menjelaskan fakultas-fakultas yang ada di Udinus, 
+                    seperti Fakultas Ilmu Komputer, Fakultas Ekonomi dan Bisnis, dan lain-lain. 
+                    Bisa juga menyoroti program studi unggulan, terutama di bidang teknologi informasi dan bisnis, 
+                    yang terkenal memiliki akreditasi baik dan menghasilkan lulusan yang berdaya saing tinggi di pasar kerja.</p>
+                </div>
+                <div class="card-footer">
+                  <small class="text-body-secondary">Last updated 3 mins ago</small>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <img src="img/OIP.jpeg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Inovasi dan Teknologi di Udinus</h5>
+                  <p class="card-text">
+                    Artikel ini bisa mengangkat inovasi yang dilakukan Udinus dalam bidang teknologi, 
+                    seperti laboratorium penelitian canggih, proyek pengembangan kecerdasan buatan, dan kolaborasi dengan industri teknologi. 
+                    Ceritakan pula peran mahasiswa dan dosen dalam penelitian serta kontribusi yang diberikan universitas ini dalam bidang teknologi di Indonesia.</p>
+                </div>
+                <div class="card-footer">
+                  <small class="text-body-secondary">Last updated 3 mins ago</small>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                  <img src="img/OIP.jpeg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Udinus Sebagai Kampus Berbasis Kewirausahaan</h5>
+                    <p class="card-text">
+                        Udinus terkenal dengan pendekatan kewirausahaannya. 
+                        Artikel ini bisa menjelaskan program-program kewirausahaan yang tersedia untuk mahasiswa, 
+                        termasuk inkubator bisnis, kompetisi startup, dan bimbingan dari mentor bisnis. 
+                        Artikel ini dapat memberikan gambaran tentang bagaimana Udinus mendukung mahasiswa untuk mengembangkan jiwa wirausaha.</p>
+                  </div>
+                  <div class="card-footer">
+                    <small class="text-body-secondary">Last updated 3 mins ago</small>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card h-100">
+                  <img src="img/OIP.jpeg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Fasilitas dan Sarana Prasarana Udinus</h5>
+                    <p class="card-text">
+                        Sebuah artikel mengenai fasilitas yang dimiliki Udinus, seperti gedung perkuliahan modern, 
+                        perpustakaan digital, pusat olahraga, dan fasilitas penunjang lainnya. 
+                        Artikel ini akan membantu calon mahasiswa melihat kenyamanan dan kelengkapan sarana yang disediakan universitas ini.</p>
+                  </div>
+                  <div class="card-footer">
+                    <small class="text-body-secondary">Last updated 3 mins ago</small>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card h-100">
+                  <img src="img/OIP.jpeg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Kegiatan Mahasiswa dan Organisasi di Udinus</h5>
+                    <p class="card-text">
+                        Dalam artikel ini, kita bisa membahas berbagai kegiatan mahasiswa, 
+                        termasuk Unit Kegiatan Mahasiswa (UKM), komunitas, dan organisasi lainnya. 
+                        Pembaca bisa mendapatkan informasi tentang jenis kegiatan yang mendukung pengembangan bakat, minat, 
+                        dan keterampilan mahasiswa, mulai dari kegiatan olahraga, seni, hingga keilmuan dan riset.</p>
+                  </div>
+                  <div class="card-footer">
+                    <small class="text-body-secondary">Last updated 3 mins ago</small>
+                  </div>
+                </div>
+              </div>
+          </div>
+    </section>
+    <!-- end article -->
+    <!--Gallery-->
+    <section id="gallery" class="text-center p-5 bg-danger-subtle" style="background-color: rgb(184, 221, 255);">
+        <h1 class="fw-bold display-4 pb-3">GALLERY</h1>
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="img/OIP.jpeg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="img/OIP.jpeg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="img/OIP.jpeg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="img/OIP.jpeg" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+    </section>
+    <!-- end gallery -->
+    <!-- schedule -->
+        <section id="Schedule" class="text-center p-5 bg-danger-subtle">
+            <h1 class="fw-bold display-4 pb-3">SCEDULE</h1>
+            <div class="row row-cols-1 row-cols-md-3 g-3 justify-content-center">
+                <div class="col">
+            <div class="card border-dark mb-3" style="max-width: 18rem;">
+                <div class="card-header bg-danger text-light">Senin</div>
+                <div class="card-body">
+                  <p class="card-text">free</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card border-dark mb-3" style="max-width: 18rem;">
+                <div class="card-header bg-danger text-light">selasa</div>
+                <div class="card-body">
+                  <p class="card-text">
+                    07.00-08.40<br>
+                    basis data
+                    <br><hr>
+                    10.20-12.00<br>
+                    pkn
+                    <br><hr>
+                    15.30-18.00<br>
+                    kecerdasan buatan
+                  </p>
+                </div>
+              </div>
+              </div>
+              <div class="col">
+              <div class="card border-dark mb-3" style="max-width: 18rem;">
+                <div class="card-header bg-danger text-light">Rabu</div>
+                <div class="card-body">
+                  <p class="card-text">
+                    07.00-08.40<br>
+                    basis data
+                    <br><hr>
+                    09.30-12.00<br>
+                    probabilitas dan statistik
+                  </p>
+                </div>
+              </div>
+              </div>
+              <div class="col">
+              <div class="card border-dark mb-3" style="max-width: 18rem;">
+                <div class="card-header bg-danger text-light">Kamis</div>
+                <div class="card-body">
+                  <p class="card-text">
+                    07.30-09.30<br> 
+                    rpl
+                    <br><hr>
+                    09.30-12.00<br>
+                    logika
+                  </p>
+                </div>
+              </div>
+              </div>
+              <div class="col">
+              <div class="card border-dark mb-3" style="max-width: 18rem;">
+                <div class="card-header bg-danger text-light">jumat</div>
+                <div class="card-body">
+                  <p class="card-text">
+                    07.00-08.40<br>
+                    pbw
+                    <br><hr>
+                    09.30-12.00<br>
+                    sistem operasi
+                </p>
+                </div>
+              </div>
+              </div>
+              <div class="col">
+              <div class="card border-dark mb-3" style="max-width: 18rem;">
+                <div class="card-header bg-danger text-light">Sabtu</div>
+                <div class="card-body">
+                  <p class="card-text">free</p>
+                </div>
+              </div>
+              </div>
+            </div>
+        </section>
+    <!-- end schendule -->
+    <!-- about me -->
+    <section id="aboutme" class="text-center p-5 bg-danger-subtle" style="background-color: rgb(184, 221, 255);">
+      <div class="container">
+        <div class="d-sm-flex align-items-center justify-content-center">
+          <div class="p-3">
+            <img src="img/kikii.png" width="200"/>
+          </div>
+          <div class="p-md-5 text-sm-start">
+            <h3 class="lead">A11.2023.15151</h3>
+            <h1 class="fw-bold">Sakinah dwi Agustin</h1>
+            Program Studi Teknik Informatika<br />
+            <a href="https://dinus.ac.id/" class="fw-bold text-decoration-none"
+              >Universitas Dian Nuswantoro</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+     <!-- end about me -->
+    <!--footer-->
+    <footer class="text-center p-5">
+        <div>
+          <a
+            href="https://www.instagram.com/kkickp?igsh=cDVtdGxxamVzNXho&utm_source=qr"
+          >
+            <i class="h2 p-2 text-dark bi bi-instagram"></i>
+          </a>
+          <a href="https://github.com/Kkickp">
+            <i class="h2 p-2 text-dark bi bi-github"></i>
+          </a>
+        </div>
+        <div>
+          <p>Kkickp</p>
+        </div>
+    </footer>
+    <!-- end footer -->
+    <!--Membuat tanggal dan waktu-->
+      <script type="text/javascript">
+
+        window.setTimeout("tampilWaktu()", 1000);
+
+        function tampilWaktu() {
+          var waktu = new Date();
+          var bulan = waktu.getMonth() + 1;
+
+          setTimeout("tampilWaktu()",1000);
+          document.getElementById("tanggal").innerHTML = 
+          waktu.getDate() + "/" + bulan + "/" + waktu.getFullYear();
+
+          document.getElementById("jam").innerHTML = 
+          waktu.getHours() + ":" + waktu.getMinutes() + ":" + waktu.getSeconds();
+        }
+      </script> 
+    <!--Membuat mode gelap terang berjalan-->
+      <script type="text/javascript">
+        document.getElementById("dark").onclick = function () {
+    
+        document.body.classList.remove("light-mode");
+        document.body.classList.add("dark-mode");
+        
+        applyDarkModeStylesToSection("artikel");
+        applyDarkModeStylesToSection("galeri");
+        applyDarkModeStylesToSection("schedule");
+        applyDarkModeStylesToSection("about");
+        applyDarkModeStylesToSection("home"); 
+      }
+
+        document.getElementById("light").onclick = function () {
+            
+            document.body.classList.remove("dark-mode");
+            document.body.classList.add("light-mode");
+
+            revertStylesForSection("artikel");
+            revertStylesForSection("galeri");
+            revertStylesForSection("schedule");
+            revertStylesForSection("about");
+            revertStylesForSection("home"); 
+        };
+        function applyDarkModeStylesToSection(sectionId) {
+              var section = document.getElementById(sectionId);
+              if (section) {
+                  section.classList.remove("bg-info-subtle"); 
+                  section.style.backgroundColor = "#000"; 
+                  section.style.color = "white";
+
+                  
+                  var childElements = section.querySelectorAll("*");
+                  childElements.forEach(function (element) {
+                      element.style.backgroundColor = "#000";
+                      element.style.color = "white";
+                  });
+              }
+          }
+
+          function revertStylesForSection(sectionId) {
+              var section = document.getElementById(sectionId);
+              if (section) {
+                  section.classList.add("bg-info-subtle"); 
+                  section.style.backgroundColor = ""; 
+                  section.style.color = ""; 
+
+                  var childElements = section.querySelectorAll("*");
+                  childElements.forEach(function (element) {
+                      element.style.backgroundColor = "";
+                      element.style.color = "";
+                  });
+              }
+          }
+      </script>
+</body>
+</html>
